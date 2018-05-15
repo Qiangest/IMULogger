@@ -142,6 +142,8 @@ void loop()
       Serial.println();
       RTMath::display("Mag:", (RTVector3&)imu->getCompass());              // compass data
       Serial.println();
+      RTMath::display("Gravity:",rotatedGravity);
+      Serial.println();
       RTMath::displayRollPitchYaw("Pose:", (RTVector3&)fusion.getFusionPose()); // fused output
       Serial.println();
       Serial.println("END");
